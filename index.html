@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>GB TENNIS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="gb-shell">
+    <div class="gb-top-row">
+      <div class="gb-led" id="led"></div>
+      <div class="gb-brand">TENNIS <span>&reg;</span></div>
+    </div>
+
+    <div class="gb-screen-frame">
+      <div class="gb-screen-label">DOT MATRIX WITH STEREO SOUND</div>
+      <div class="gb-screen">
+        <canvas id="game" width="160" height="144"></canvas>
+      </div>
+    </div>
+
+    <div class="gb-controls">
+      <div class="dpad" id="dpad">
+        <button class="dpad-btn up" data-dir="up" aria-label="Haut"></button>
+        <button class="dpad-btn down" data-dir="down" aria-label="Bas"></button>
+        <button class="dpad-btn left" data-dir="left" aria-label="Gauche"></button>
+        <button class="dpad-btn right" data-dir="right" aria-label="Droite"></button>
+        <div class="dpad-center"></div>
+      </div>
+
+      <div class="ab-buttons">
+        <button class="round-btn b-btn" id="btnB">B</button>
+        <button class="round-btn a-btn" id="btnA">A</button>
+      </div>
+    </div>
+
+    <div class="gb-mid-row">
+      <div class="select-start">
+        <button class="pill-btn" id="btnSelect">SELECT</button>
+        <button class="pill-btn" id="btnStart">START</button>
+      </div>
+      <div class="speaker">
+        <div class="speaker-line"></div>
+        <div class="speaker-line"></div>
+        <div class="speaker-line"></div>
+        <div class="speaker-line"></div>
+        <div class="speaker-line"></div>
+        <div class="speaker-line"></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="hint">
+    Clavier : flèches/WASD = déplacer &nbsp;·&nbsp; Espace/Z = frapper (A) &nbsp;·&nbsp; Maj/X = lob (B) &nbsp;·&nbsp; Entrée = Start &nbsp;·&nbsp; Tab = Select
+  </p>
+
+  <script src="game.js"></script>
+</body>
+</html>
