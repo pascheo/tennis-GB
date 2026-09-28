@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<title>PICROSS</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Picross</h1>
+    <div class="timer" id="timer" aria-label="Chronomètre">00:00</div>
+  </header>
+
+  <main class="board" id="board">
+    <div class="board-grid" id="board-grid"></div>
+  </main>
+
+  <p class="hint">
+    Clic gauche = noircir &nbsp;·&nbsp; Clic droit / Alt+clic = croiser &nbsp;·&nbsp;
+    Cliquer à nouveau = revenir à l'état neutre
+  </p>
+
+  <footer class="controls">
+    <button id="btn-new-game" class="btn btn-primary">Nouveau jeu</button>
+    <button id="btn-reset" class="btn">Réinitialiser</button>
+    <button id="btn-help" class="btn">Aide</button>
+  </footer>
+
+  <div class="modal" id="victory-modal">
+    <div class="modal-content">
+      <h2>Bravo !</h2>
+      <p>Grille résolue en <span id="victory-time">00:00</span></p>
+      <button id="btn-victory-new-game" class="btn btn-primary">Nouveau jeu</button>
+    </div>
+  </div>
+
+  <script src="constraint-solver.js"></script>
+  <script src="grid-generator.js"></script>
+  <script src="index-calculator.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
